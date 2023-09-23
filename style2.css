@@ -51,7 +51,6 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
   background-color: #d1d1d1;
 }
- 
 @media (max-width: 1000px){
   .content{
   width: 100%;
@@ -59,15 +58,16 @@ tr:nth-child(odd) {
   flex-direction: column;
   }
   .table {
-  order: 2;
+  order: 1;
   }
   .form {
-  order: 1;
+  order: 2;
   }
   #nav{
   display-direction:column;
   }
 }
+
 @media(min-width: 1000px) {
   .content{
   max-width: 960px;
@@ -79,3 +79,4 @@ tr:nth-child(odd) {
   display: inline;
   }
 }
+

@@ -58,10 +58,10 @@ tr:nth-child(odd) {
   flex-direction: column;
   }
   .table {
-  order: 2;
+  order: 1;
   }
   .form {
-  order: 1;
+  order: 2;
   }
   #nav{
   display-direction:column;

@@ -59,9 +59,6 @@ tr:nth-child(odd) {
   .table {
     order: 1;
   }
-  .q1 {
-    order: 2;
-  }
   .form {
     order: 3;
   }

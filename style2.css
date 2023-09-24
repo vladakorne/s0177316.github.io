@@ -1,0 +1,49 @@
+/* Common styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header, nav, table, .links, form, footer {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Mobile styles */
+header, nav, .links, form, footer {
+  background-color: #f2f2f2;
+}
+
+table {
+  width: 100%;
+  order: 2;
+}
+
+.links {
+  order: 3;
+}
+
+/* Tablet and desktop styles - using Media Query */
+@media (min-width: 768px) {
+  header, nav, .links, form, footer {
+    background-color: #fff;
+  }
+
+  table {
+    order: 1;
+  }
+}

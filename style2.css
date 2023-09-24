@@ -52,30 +52,3 @@ tr:nth-child(odd) {
   background-color: #d1d1d1;
 }
 
-
-
-#main-aside-wrapper {
-  flex-direction: row; /*строки слева направо*/
-  display: flex; /*для блокового отображения*/
-}
-#main-aside-wrapper main, 
-#main-aside-wrapper aside {
-  background-color: #ddd;
-  margin: 5px;
-  padding: 20px;
-}
-#q1 {
-  flex: 0;
-  order: 2;/*порядок блоков*/
-  flex-wrap: wrap;
-}
-#table {
-  flex: 1;
-  order: 1;
-}
-
-@media screen and (min-width: 800px) {
-  #main-aside-wrapper {
-    flex-direction: row;
-  }
-}

@@ -1,8 +1,99 @@
 <!DOCTYPE html>
 <html lang="ru">
- <head>
-     <link rel="stylesheet" href="style.css">
- </head>
+ <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    header {
+      background-color: #ccc;
+      padding: 10px;
+      height: 120px;
+    }
+
+    .menu {
+      margin-right: 10px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .content {
+      max-width: 800px;
+      background-color: #cccccc;
+      margin: 0 auto;
+      margin-top: 0px;
+      padding: 10px;
+    }
+
+    footer {
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #e5e5e5;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #d1d1d1;
+    }
+
+    /* Mobile Styles (less than 600px) */
+  
+    @media (max-width: 600px) {
+      .menu {
+        position: static;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .menu li {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .content {
+        width: 100%;
+      }
+
+      .footer {
+        width: 100%;
+      }
+    }
+
+    /* Tablet & Desktop Styles (greater than 600px) */
+  
+    @media (min-width: 600px) {
+      .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+      }
+
+      .menu {
+        order: -1;
+      }
+    }
+  </style>
  <body>
     <header class="header" id="top">
       <div id="headcont">

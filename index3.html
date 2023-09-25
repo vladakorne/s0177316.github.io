@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <head>
-     <link rel="stylesheet" href="style2.css">
- </head>
- <body>
-  <div id="main-aside-wrapper">
-    <header class="header" id="top">
-      <div id="headcont">
-        <div class="menu">
-          <nav><span>Меню</span>
-          <a href="#q1"> Ссылки </a> <a href="#table"> Таблица </a> <a href="#form"> Форма </a> <a href="#footer"> Подвал </a>
-           </nav>
-        </div>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header class="header">
         <img style="float:left; margin:5px; width:100px; height:100px;" src="https://new-year-party.ru/wp-content/uploads/risunki-sobaki-013.jpg" alt="logo" />
-        <h1><div style="background-color:#ddd; padding:10px;">Разработка пользовательского WEB-интерфейса</div></h1>
-      </div>
+        <h2><div style="background-color:#ddd; padding:10px;">Разработка пользовательского WEB-интерфейса</div></h2>
     </header>
- <div class="content">
-<title>Link</title>
+
+    <div class="menu">
+        <nav>
+          <span>Меню</span>
+        <a href="#q1">Ссылки</a>
+        <a href="#table">Таблица</a>
+        <a href="#form">Форма</a>
+        <a href="#footer">Подвал</a>
+        </nav>
+      </div>
+
+    
+<div class="content">
+<div class ="link">
 <h1 id="q1">Link</h1>
 <li><a href="http://kubsu.ru/" title="Официальный сайт Кубанского государственного университета">(1)Абсолютная гиперссылка</a> </li>
 <li><a href ="https://kubsu.ru/" >(2)В протоколе https</a></li>
@@ -64,11 +69,9 @@
       <li><a href="https://www.kubsu.ru/ru/node/38806">Title three</a></li>
     </ol></li>
 <li><a href="ftp://username:password@servername/downloadfile">(21)Ссылка на файл на сервере FTP с авторизацией</a></li>
+</div>
 
-
-
-<div>
-<title>Table</title>
+<div class = "table">
 <h1 id="table">Table</h1>
 <table id="table">
             <tr>
@@ -123,8 +126,7 @@
 </div>
 
 
-<div>
-<title>Form</title>
+<div class ="form">
 <h1 id="form">Form</h1>
 <label>
 ФИО:<br />
@@ -177,11 +179,14 @@
 кнопка сохранения><br />
 <button  type =" submit " > Сохранить </button >
 </label><br />
+</div>
 </body>
 </div>
-</div>
+
+
+
 <div>
-<h1 id="footer">Footer</h1>
+<id="footer">
 <footer id="footer">
 <footer id="footer">(с)vladakorne</footer>
 </div>

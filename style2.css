@@ -51,6 +51,31 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
   background-color: #d1d1d1;
 }
+#main-aside-wrapper {
+  flex-direction: row;
+  display: flex;
+}
+#main-aside-wrapper main, #main-aside-wrapper aside {
+  background-color: #ddd;
+  margin: 10px;
+  padding: 10px;
+}
+#main-aside-wrapper aside {
+  flex: 1;
+  order: 1;
+}
+#main-aside-wrapper main {
+  flex: 3;
+  order: 2;
+}
+
+
+
+
+
+
+
+
 /* Mobile Styles (less than 800px) */
   
     @media (max-width: 800px) {

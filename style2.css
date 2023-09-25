@@ -102,3 +102,20 @@ tr:nth-child(odd) {
       }
       
     }
+#main-aside-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+#main-aside-wrapper main, #main-aside-wrapper aside {
+  background-color: #ddd;
+  margin: 10px;
+  padding: 10px;
+}
+#main-aside-wrapper aside {
+  flex: 1;
+  order: 1;
+}
+#main-aside-wrapper main {
+  flex: 3;
+  order: 2;
+}

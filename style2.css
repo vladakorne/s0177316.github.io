@@ -23,7 +23,7 @@ header {
 
 .content {
   max-width: 800px;
-  background-color: #cccccc;
+  background-color: #f2f2f2;
   margin: 0 auto;
   margin-top: 0px;
   padding: 10px;
@@ -87,4 +87,14 @@ tr:nth-child(odd) {
       .menu {
         order: -1;
       }
+      .table{
+        oreder:1;
+      }
+      .q1{
+        order:2;
+      }
+      .form{
+        order:3;
+      }
+      
     }

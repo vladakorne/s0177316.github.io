@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <header class="header m-0 p-4">
+        <div class="container-fluid">
+            <img style="float:left; margin:5px; width:100px; height:100px;" src="https://new-year-party.ru/wp-content/uploads/risunki-sobaki-013.jpg" alt="logo" />
+            <div style="background-color:#ddd; padding:10px;">Разработка пользовательского WEB-интерфейса</div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row d-flex mx-sm-m3">
+        <div class="content d-flex flex-column p-1">
+            <div class="menu">
+                <nav>
+                    <ul class="nav flex-md-row flex-column ">
+                        <span>Меню</span>
+                        <a href="#q1"> Ссылки </a>
+                        <a href="#table">Таблица</a>
+                        <a href="#form">Форма</a>
+                        <a href="#footer">Подвал</a>
+                    </ul>
+                </nav>
+            </div>
+            <div class="form order-md-1 order-3">
+                <div class="link">
+                    <h1 id="q1">Link</h1>
+                    <li><a href="http://kubsu.ru/" title="Официальный сайт Кубанского государственного университета">(1)Абсолютная гиперссылка</a> </li>
+                    <li><a href="https://kubsu.ru/">(2)В протоколе https</a></li>
+                    <li>
+                        <a href="http://kubsu.ru/"><img src="https://www.kubsu.ru/sites/default/files/news/img_23db41_5.jpg" width="100" height="100">(3)</a>
+                    </li>
+                    <li><a href="/vn.html">(4)Сокращенная ссылка на внутреннюю страницу</a></li>
+                    <li><a href="index.html">(5)Сокращенная ссылка на главную страницу</a></li>
+                    <li><a href="#yakor">(6)Ссылка на фрагмент</a></li>
+                    <h>Основан 5 (18) сентября 1920 года как Институт народного образования. 19 декабря 1920 года был избран первый ректор — Никандр Маркс. Позже заведение было переименовано в Кубанский высший педагогический институт. 19 сентября 1924 года
+                        постановлением СНК РСФСР Кубанский высший педагогический институт был утверждён в числе других педагогических институтов страны в составе шести учебных отделений. В 1931 году институт был переименован в Кубанский агрономический
+                        педагогический институт. В 1933 году переименован в Краснодарский государственный педагогический и учительский институт им. 15-летия ВЛКСМ. В конце 1940-х годов переименован в Краснодарский государственный педагогический институт
+                        им. 15-летия ВЛКСМ. 18 февраля 1970 года Краснодарский государственный педагогический институт был преобразован в Кубанский государственный университет. В марте 1996 года на встрече Джорджа Сороса и председателя Правительства РФ
+                        Виктора Черномырдина было подписано соглашение о совместной программе по созданию Интернет-центров в классических университетах 33 регионов России, в число которых вошёл и Кубанский государственный университет. С 1998 по 2001 год,
+                        благодаря грантовой поддержке Института «Открытое Общество», в университете была создана команда высококвалифицированных молодых специалистов, получивших квалификационные сертификаты таких крупнейших мировых лидеров в области информационных
+                        технологий, как IBM, SUN, CISCO, ORACLE.
+                    </h>
+                    <h2 id="yakor">Фрагмент</h2>
+                    <h>
+                        В январе 2006 года ректор вуза академик РАН Владимир Бабешко был избран почётным сенатором Высшей технико-экономической школы Берлина. Звание почётного профессора КубГУ носят известные учёные, политические и общественные деятели: экс-премьер-министр Российской
+                        Федерации, президент Торгово-промышленной палаты РФ академик Евгений Примаков, депутат Государственной думы академик Михаил Залиханов, Чрезвычайный и Полномочный посол Германии в России в 2002—2005 годах Г. Ф. фон Плётц, ректор
+                        МГУ академик Виктор Садовничий, профессор Университета Теннесси Р. Уильямс, экс-президент Ассоциации колледжей Среднего Запада (США) Э. Хейфорд. 14 ноября 2008 года ректором КубГУ стал Михаил Астапов, ранее возглавлявший департамент
+                        образования Краснодарского края.</h>
+                    <li><a href="https://www.kubsu.ru/" target="_blank" rel="nofollow noopener noreferrer">(7)Ссылка на КубГУ с тремя параметрами</a></li>
+                    <li><a href="https://www.kubsu.ru/?id=123" target="_blank" rel="nofollow noopener noreferrer">(8)Ссылка на КубГУ с параметром ID</a></li>
+                    <li><a href="/index.html">(9)Относительная ссылка на страницу в текущем каталоге</a> </li>
+                    <li> <a href="about/aboutint.html">(10)Относительная ссылка на страницу в каталоге about</a> </li>
+                    <li> <a href="about/aboutint.html">(11)Относительная ссылка на страницу в каталоге уровнем выше текущего</a> </li>
+                    <li> <a href="about/about3/aboitin.html">(12)Относительная ссылка на страницу в каталоге двумя уровнями выше</a> </li>
+                    <li> 11 апреля 2013 года на основании материалов оперативно-розыскной деятельности ведомства было возбуждено уголовное дело по ч. 3 ст. 159 УК РФ «Мошенничество в особо крупном размере» в отношении профессора <a href="http://kubsu.ru/">Кубанского государственного университета </a>Михаила
+                        Саввы. Многие сторонники Саввы и правозащитники считают дело политически заказным, так как профессор написал статью, критикующую методы работы ФСБ с краснодарскими НКО</li>
+                    <li> <a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D0%B1%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82#toc">(14) Фрагмент стороннего сайта, переходит на содержание </a>                        </li>
+                    <li>
+                        <img src="https://static.rustore.ru/apk/1816534207/content/ICON/d289ec11-2dde-4b64-92df-88dd36f4457b.jpg" widht="100" height="95" usemap="#mapphoto">
+                        <map name="mapphoto">
+                            <area shape="rect" coords="44,40,56,59" alt="прямоугольник" href="https://www.kubsu.ru/">
+                            <area shape="circle" coords="50,15,4" alt="Круг" href="https://www.kubsu.ru/">
+                        </map>(15)Ссылки из прямоугольных и круглых областей картинки(ствол дерева-прямогульная, лист-овальная)</li>
+                    <li> <a href="">(16)Cсылка с пустым href</a></li>
+                    <li><a>(17)Ссылка без href</a> </li>
+                    <li><a href="https://ru.wikipedia.org/wiki/Краснодар" rel="nofollow">(18)Запрещен переход поисковикам</a></li>
+                    <li>
+                        <noindex><a href="https://ru.wikipedia.org/wiki/Краснодар">(19)Запрещен для индексации поисковиками</a></noindex>
+                    </li>
+                    <li> (20)Нумерованный список ссылок с подписями
+                        <ol>
+                            <li><a href="https://www.kubsu.ru/ru/node/31489">Title one</a></li>
+                            <li><a href="https://www.kubsu.ru/ru/fktipm">Title two</a></li>
+                            <li><a href="https://www.kubsu.ru/ru/node/38806">Title three</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="ftp://username:password@servername/downloadfile">(21)Ссылка на файл на сервере FTP с авторизацией</a></li>
+                </div>
+            </div>
+            <div class="order-md-2 order-2">
+                        <div class="table">
+                            <table id="table">
+                            <h1 id="table">Table</h1>
+                        <tr>
+                            <th>Продукт</th>
+                            <th>Цена</th>
+                            <th>Количество</th>
+                            <th>Общая стоимость</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Классическая одежда</td>
+                        </tr>
+                        <tr>
+                            <td>Рубашка</td>
+                            <td>8</td>
+                            <td>10</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>Брюки</td>
+                            <td>10</td>
+                            <td>6</td>
+                            <td>60</td>
+                        </tr>
+                        <tr>
+                            <td>Пиджак</td>
+                            <td>14</td>
+                            <td>2</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>Туфли</td>
+                            <td>25</td>
+                            <td>10</td>
+                            <td>250</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Аксессуары</td>
+                        </tr>
+                        <tr>
+                            <td>Сумка</td>
+                            <td>20</td>
+                            <td>4</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>Ремень</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>20</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="order-md-3 order-4">
+                <div class="form">
+                    <h1 id="form">Form</h1>
+                   <form>
+                    <p>ФИО:<input></p>
+                    <p>номер телефона<input type="number"></p>
+                    <p>mail:<input type="email"></p>
+                    <p>дата рождения:<input type="date" name="date-picker" id="date-picker"></p>
+                    <p> биография:<textarea name="comment" cols="35"></textarea></p>
+                    <p>список с выбором:</p>
+                        <select name="super[]" multiple="multiple">
+                            <option value="Pascal">Pascal</option>
+                            <option value="C">C</option>
+                            <option value="C++">C++</option>
+                            <option value="Java">Java</option>
+                            <option value="PHP">PHP</option>
+                            <option value="Python">Python</option>
+                            <option value="Haskel">Haskel</option>
+                            <option value="Prolog">Prolog</option>
+                            <option value="Scala">Scala</option>
+                            <option value="Clojure">Clojure</option>
+                        </select>
+                    <br>
+                        выбор пола: 
+                        <input type="radio" name="radio-group" id="radio1" value="option1">
+                        <label for="radio1">Ж</label>
+                        <input type="radio" name="radio-group" id="radio2" value="option2">
+                        <label for="radio2">М</label>
+                    <br>
+                            <input type="checkbox" id="Checkbox">
+                            <label for="Checkbox">с контрактом ознакомлен/а</label>
+                        <br>
+                        <label>
+                        кнопка сохранения>
+                        <button  type ="submit">Сохранить</button >
+                        </label>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer id="footer">(с)vladakorne</footer>
+</body>
+</html>

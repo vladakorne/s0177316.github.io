@@ -1,6 +1,3 @@
-var document;
-var alert;
-var console;
 
 function calculate() {
   var r;

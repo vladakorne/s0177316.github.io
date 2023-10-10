@@ -17,7 +17,4 @@ function calculate() {
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
-  var b = document.getElementById("btn");
-  console.log(event.type + " на " + event.currentTarget);
-  b.addEventListener("click", calculate);
-});
+    var b = document.getElementById("btn");

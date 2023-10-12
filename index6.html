@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style4.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Задание 6</title>
+    <script src="java2.js"></script>
+  </head>
+  <body>
+    <div class="content1">
+      <h1>Калькулятор стоимости заказа</h1>
+      <label>Количество товара: <input id="kol1" type="text" /><br /></label>
+      <label
+        >Выберите товар:
+        <select name="product">
+          <option value="8000">Рубашка</option>
+          <option value="1000">Брюки</option>
+          <option value="14000">Пиджак</option>
+          <option value="25000">Туфли</option>
+          <option value="30000">Сумка</option>
+          <option value="500">Ремень</option>
+        </select></label
+      ><br /><br /><button onclick="calculate()">Подсчитать стоимость</button
+      ><br /><br />
+      <div id="result1"></div>
+    </div>
+    <br /><br />
+    <div class="content2">
+      <form id="lk">
+        <label>Количество товара: <input id="kol" type="text" /><br /></label>
+        <label
+          >Выберите товар:
+          
+          <select name="prodType" id="select">
+            <option value="1">Рубашка</option>
+            <option value="2">Брюки</option>
+            <option value="3">Пиджак</option>
+          </select></label
+        >
+        <div id="radios">
+          <label
+            ><input type="radio" name="prodOptions" value="option1" /> Турецкое качество</label
+          >
+          <label
+            ><input type="radio" name="prodOptions" value="option2" />Хорошее качество</label
+          >
+          <label
+            ><input type="radio" name="prodOptions" value="option3" /> Премиум качество</label
+          >
+        </div>
+        <div id="checkboxes">
+          <label
+            ><input type="checkbox" name="prop1" />Подарочная коробка</label
+          >
+          <label><input type="checkbox" name="prop2" />Подарочный пакет</label>
+        </div>
+        <div id="result"></div>
+      </form>
+    </div>
+  </body>
+</html>

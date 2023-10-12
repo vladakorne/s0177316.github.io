@@ -1,3 +1,7 @@
+var document;
+var window;
+var alert;
+var console;
 function updatePrice() {
     var kol = document.getElementById("kol").value;
     var s = document.getElementsByName("prodType");

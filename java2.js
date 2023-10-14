@@ -1,121 +1,79 @@
-var document;
-var window;
-var alert;
-var console;
-function updatePrice() {
-    var kol = document.getElementById("kol").value;
-    var s = document.getElementsByName("prodType");
-    var select = s[0];
-    var price = 0;
-    var optionPrice;
-    var checkDiv;
-    var propPrice;
-    var prodPrice;
-    var checkboxes;
+function calculatePrice() {
+    var kolvo = parseInt(document.getElementById("kol").value);
+    var tovar = document.querySelector('input[name="tovar"]:checked').value;
+    var option = document.getElementById("option").value;
+    var svva = document.getElementById("svva").checked;
+    var cost = 0;
     var prices = getPrices();
-    var priceIndex = parseInt(select.value) - 1;
-      var radioDiv = document.getElementById("radios");
-      var radios = document.getElementsByName("prodOptions");
-      if (priceIndex >= 0) {
-          price = prices.prodTypes[priceIndex];
-      }
-      if (select.value === "3" || select.value === "1") {
-          radioDiv.style.display = "none";
-      } else {
-          radioDiv.style.display = "block";
-      }
-      radios.forEach(function (radio) {
-          if (radio.checked) {
-              optionPrice = prices.prodOptions[radio.value];
-              if (optionPrice !== undefined) {
-                  price += optionPrice;
-              }
-          }
-      });
-  
-  
-      checkDiv = document.getElementById("checkboxes");
-      if (select.value === "2" || select.value === "1") {
-          checkDiv.style.display = "none";
-      } else {
-          checkDiv.style.display = "block";
-      }
-  
-  
-      checkboxes = document.querySelectorAll("#checkboxes input");
-      checkboxes.forEach(function (checkbox) {
-          if (checkbox.checked) {
-              propPrice = prices.prodProperties[checkbox.name];
-              if (propPrice !== undefined) {
-                  price += propPrice;
-              }
-          }
-      });
-  
-      prodPrice = document.getElementById("result");
-      prodPrice.innerHTML = (price * kol) + " рублей";
-      if (/\D/.test(kol)) {
-          prodPrice.innerHTML = "Неверные данные";
-      }
-  }
-  
-  function getPrices() {
-      return {
-          prodOptions: {
-              option2: 250,
-              option3: 500
-          },
-          prodProperties: {
-              prop1: 1000,
-              prop2: 500
-          },
-          prodTypes: [8000, 10000, 14000]
-      };
-  }
-  
-  window.addEventListener("DOMContentLoaded", function () {
-  
-      var radioDiv = document.getElementById("radios");
-      var s;
-      var select;
-      var radios;
-      var checkboxes;
-      var kol;
-      radioDiv.style.display = "none";
-  
-  
-      s = document.getElementsByName("prodType");
-      select = s[0];
-  
-      select.addEventListener("change", function () {
-          updatePrice();
-      });
-  
-  
-      radios = document.getElementsByName("prodOptions");
-      radios.forEach(function (radio) {
-          radio.addEventListener("change", function () {
-              updatePrice();
-          });
-      });
-  
-  
-      checkboxes = document.querySelectorAll("#checkboxes input");
-      checkboxes.forEach(function (checkbox) {
-          checkbox.addEventListener("change", function () {
-              updatePrice();
-          });
-      });
-  
-      kol = document.getElementById("kol");
-      kol.oninput = function () {
-          updatePrice();
-      };
-  
-      updatePrice();
-  });
-  
-  
+
+    if (tovar === "1") {
+        cost = prices.prodTypes[0];
+    } else if (tovar === "2") {
+        if (option === "option1") {
+            cost =prices.prodOptions.option1+prices.prodTypes[1]
+        } else if (option === "option2") {
+            cost =prices.prodOptions.option2+prices.prodTypes[1]
+        } else if (option === "option3") {
+            cost += prices.prodOptions.option3+prices.prodTypes[1]
+        }
+    } else if (tovar === "3") {
+        cost = prices.prodTypes[2];
+    }
+    if (svva) {
+        cost +=prices.prodProperties.prop1
+    }
+
+    var totalPrice = cost * kolvo;
+
+    document.getElementById("rez").innerHTML = "Общая стоимость: " + totalPrice + " рублей";
+}
+
+document.getElementById("kol").addEventListener("input", calculatePrice);
+document.querySelectorAll('input[name="tovar"]').forEach(function(element) {
+    element.addEventListener("input", calculatePrice);
+});
+document.getElementById("option").addEventListener("input", calculatePrice);
+document.getElementById("svva").addEventListener("input", calculatePrice);
+
+
+function getPrices() {
+    return {
+    prodOptions: {
+    option1:0,
+    option2: 3000,
+    option3: 5000
+    },
+    prodProperties: {
+    prop1: 1000
+    },
+    prodTypes: [80000, 10000, 14000]
+    };
+}
+
+var radi = document.querySelectorAll('input[name="tovar"]');
+for (var i = 0; i < radi.length; i++) 
+{
+    radi[i].addEventListener("change", function() 
+    {
+        var service = document.querySelector('input[name="tovar"]:checked').value;
+        if (service === "1") 
+        {
+            document.getElementById("options").style.display = "none";
+            document.getElementById("sv").style.display = "none";
+        }
+        else if (service === "2") 
+        {
+            document.getElementById("options").style.display = "block";
+            document.getElementById("sv").style.display = "none";
+        }
+        else if (service === "3") 
+        {
+            document.getElementById("options").style.display = "none";
+            document.getElementById("sv").style.display = "block";
+        }
+    });
+}
+
   function calculate() {
     var r;
     var f1;

@@ -6,7 +6,7 @@ function calculatePrice() {
     var cost = 0;
     var prices = getPrices();
 
-    if (tovar === "1") {
+if (tovar === "1") {
         cost = prices.prodTypes[0];
         document.getElementById("options").style.display = "none";
         document.getElementById("sv").style.display = "none";
@@ -26,12 +26,11 @@ function calculatePrice() {
         }
     } else if (tovar === "3") {
         cost = prices.prodTypes[2];
+        if (svva) {
+            cost = prices.prodProperties.prop1+prices.prodTypes[2];
+        }
         document.getElementById("options").style.display = "none";
         document.getElementById("sv").style.display = "block";
-    }
-    
-    if (svva) {
-        cost = prices.prodProperties.prop1+prices.prodTypes[2];
     }
     
     var totalPrice = cost * kolvo;

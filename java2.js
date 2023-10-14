@@ -22,20 +22,9 @@ function calculatePrice() {
     if (svva) {
         cost +=prices.prodProperties.prop1
     }
-
     var totalPrice = cost * kolvo;
-
     document.getElementById("result").innerHTML = "Общая стоимость: " + totalPrice + " рублей";
 }
-
-document.getElementById("kol").addEventListener("input", calculatePrice);
-document.querySelectorAll('input[name="tovar"]').forEach(function(element) {
-    element.addEventListener("input", calculatePrice);
-});
-document.getElementById("option").addEventListener("input", calculatePrice);
-document.getElementById("svva").addEventListener("input", calculatePrice);
-
-
 function getPrices() {
     return {
     prodOptions: {
@@ -49,6 +38,16 @@ function getPrices() {
     prodTypes: [80000, 10000, 14000]
     };
 }
+document.addEventListener("DOMContentLoaded", function() {
+    
+    document.getElementById("kol").addEventListener("input", calculatePrice);
+    document.querySelectorAll('input[name="tovar"]').forEach(function(element) {
+      element.addEventListener("change", calculatePrice);
+    });
+    document.getElementById("option").addEventListener("change", calculatePrice);
+    document.getElementById("svva").addEventListener("change", calculatePrice);
+  });
+
 
 var radi = document.querySelectorAll('input[name="tovar"]');
 for (var i = 0; i < radi.length; i++) 
@@ -73,7 +72,6 @@ for (var i = 0; i < radi.length; i++)
         }
     });
 }
-
   function calculate() {
     var r;
     var f1;

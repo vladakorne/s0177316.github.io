@@ -31,7 +31,7 @@ function calculatePrice() {
     }
     
     if (svva) {
-        cost += prices.prodProperties.prop1;
+        cost = prices.prodProperties.prop1+prices.prodTypes[2];
     }
     
     var totalPrice = cost * kolvo;

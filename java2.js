@@ -8,70 +8,59 @@ function calculatePrice() {
 
     if (tovar === "1") {
         cost = prices.prodTypes[0];
+        document.getElementById("options").style.display = "none";
+        document.getElementById("sv").style.display = "none";
     } else if (tovar === "2") {
         if (option === "option1") {
-            cost =prices.prodOptions.option1+prices.prodTypes[1]
-        } else if (option === "option2") {
-            cost =prices.prodOptions.option2+prices.prodTypes[1]
-        } else if (option === "option3") {
-            cost += prices.prodOptions.option3+prices.prodTypes[1]
-        }
-    } else if (tovar === "3") {
-        cost = prices.prodTypes[2];
-    }
-    if (svva) {
-        cost +=prices.prodProperties.prop1
-    }
-    var totalPrice = cost * kolvo;
-    document.getElementById("result").innerHTML = "Общая стоимость: " + totalPrice + " рублей";
-}
-function getPrices() {
-    return {
-    prodOptions: {
-    option1:0,
-    option2: 3000,
-    option3: 5000
-    },
-    prodProperties: {
-    prop1: 1000
-    },
-    prodTypes: [80000, 10000, 14000]
-    };
-}
-document.addEventListener("DOMContentLoaded", function() {
-    
-    document.getElementById("kol").addEventListener("input", calculatePrice);
-    document.querySelectorAll('input[name="tovar"]').forEach(function(element) {
-      element.addEventListener("change", calculatePrice);
-    });
-    document.getElementById("option").addEventListener("change", calculatePrice);
-    document.getElementById("svva").addEventListener("change", calculatePrice);
-  });
-
-
-var radi = document.querySelectorAll('input[name="tovar"]');
-for (var i = 0; i < radi.length; i++) 
-{
-    radi[i].addEventListener("change", function() 
-    {
-        var service = document.querySelector('input[name="tovar"]:checked').value;
-        if (service === "1") 
-        {
-            document.getElementById("options").style.display = "none";
+            cost = prices.prodOptions.option1 + prices.prodTypes[1];
+            document.getElementById("options").style.display = "block";
             document.getElementById("sv").style.display = "none";
-        }
-        else if (service === "2") 
-        {
+        } else if (option === "option2") {
+            cost = prices.prodOptions.option2 + prices.prodTypes[1];
+            document.getElementById("options").style.display = "block";
+            document.getElementById("sv").style.display = "none";
+        } else if (option === "option3") {
+            cost += prices.prodOptions.option3 + prices.prodTypes[1];
             document.getElementById("options").style.display = "block";
             document.getElementById("sv").style.display = "none";
         }
-        else if (service === "3") 
-        {
-            document.getElementById("options").style.display = "none";
-            document.getElementById("sv").style.display = "block";
-        }
-    });
+    } else if (tovar === "3") {
+        cost = prices.prodTypes[2];
+        document.getElementById("options").style.display = "none";
+        document.getElementById("sv").style.display = "block";
+    }
+    
+    if (svva) {
+        cost += prices.prodProperties.prop1;
+    }
+    
+    var totalPrice = cost * kolvo;
+    document.getElementById("result").innerHTML = "Общая стоимость: " + totalPrice + " рублей";
 }
+
+function getPrices() {
+    return {
+        prodOptions: {
+            option1: 0,
+            option2: 3000,
+            option3: 5000
+        },
+        prodProperties: {
+            prop1: 1000
+        },
+        prodTypes: [80000, 10000, 14000]
+    };
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("kol").addEventListener("input", calculatePrice);
+    document.querySelectorAll('input[name="tovar"]').forEach(function(element) {
+        element.addEventListener("change", calculatePrice);
+    });
+    document.getElementById("option").addEventListener("change", calculatePrice);
+    document.getElementById("svva").addEventListener("change", calculatePrice);
+});
+
   function calculate() {
     var r;
     var f1;

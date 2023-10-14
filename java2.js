@@ -25,7 +25,7 @@ function calculatePrice() {
 
     var totalPrice = cost * kolvo;
 
-    document.getElementById("rez").innerHTML = "Общая стоимость: " + totalPrice + " рублей";
+    document.getElementById("result").innerHTML = "Общая стоимость: " + totalPrice + " рублей";
 }
 
 document.getElementById("kol").addEventListener("input", calculatePrice);

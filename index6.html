@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <link rel="stylesheet" href="style4.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>Задание 6</title>
     <script src="java2.js"></script>
   </head>
   <body>
     <div class="content1">
       <h1>Калькулятор стоимости заказа</h1>
-      <label>Количество товара: <input id="kol1" type="text" /><br/></label>
-      <label
-        >Выберите товар:
+      <label>Количество товара: <input id="kol1" type="text"/><br/></label>
+      <label>Выберите товар:
         <select name="product">
           <option value="8000">Рубашка</option>
           <option value="10000">Брюки</option>
@@ -21,19 +20,20 @@
           <option value="30000">Сумка</option>
           <option value="500">Ремень</option>
         </select></label
-      ><br /><br /><button onclick="calculate()">Подсчитать стоимость</button
-      ><br /><br />
+      ><br/><br/><button onclick="calculate()">Подсчитать стоимость</button
+      ><br/><br/>
       <div id="result1"></div>
     </div>
-    <br /><br />
+    <br/><br/>
     <div class="content2">
       <form id="lk">
          <h1>Калькулятор стоимости услуг</h1>
          <label>Введите количество:</label> <input id="kol" /><br/><br/>
-         <label for="tovarr">Выберите товар:</label><br/>
-         <input type="radio" name="tovar" value="1" />Рубашка<br/>
+         <label>Выберите товар:<br/>
+         <input type="radio" name="tovar" value="1"/>Рубашка<br/>
          <input type="radio" name="tovar" value="2"/> Брюки<br/>
-         <input type="radio" name="tovar" value="3" /> Пиджак<br/>
+         <input type="radio" name="tovar" value="3"/> Пиджак<br/>
+           </label>
       <div id="options">
       <select id="option">
         <option value="option1">Среднее качество</option>
@@ -42,8 +42,7 @@
       ><br/><br/>
     </div>
     <div id="sv">
-      <input type="checkbox" id="svva" name="tovar"/>Подарочная
-      коробка<br/><br/>
+      <input type="checkbox" id="svva" name="tovar"/>Подарочная коробка<br/><br/>
     </div>
     <div id="result"></div>
       </form>

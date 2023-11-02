@@ -7,15 +7,15 @@ function openHome() {
     history.replaceState({page: 1}, "Home", "?home");
     return false;
 }
-//гарантировать выполнение кода после завершения загрузки DOM (объектной модели документа).
+
 $(document).ready(function () {
-    $(".myButton").click(function (event) {//При нажатии кнопки с этим классом вызывается функция openForm(). Затем он предотвращает действие события по умолчанию, исчезает в наложении и отображает форму с анимацией.
+    $(".myButton").click(function (event) {
         openForm();
         event.preventDefault();
         $("#myOverlay").fadeIn(297, function () {
             $("#myForm").css("display", "block").animate({opacity: 1}, 198);
         });
-        if (localStorage.getItem("name").length > 0) {//LocalStorage позволяет веб-приложениям хранить данные локально.
+        if (localStorage.getItem("name").length > 0) {
             document.querySelector("#name_polz").value =
             localStorage.getItem("name");
         }
@@ -40,7 +40,7 @@ $(document).ready(function () {
         }
     });
 
-//При нажатии на эти элементы код анимирует исчезновение формы, скрывает форму и вызывает функцию openHome().
+
     $("#myOverlay, #close").click(function () {
         $("#myForm").animate({opacity: 0}, 198, function () {
             $(this).css("display", "none");
@@ -72,7 +72,7 @@ $(document).ready(function () {
         document.querySelector("#email_polz").value = "";
         document.querySelector("#mes").value = "";
         document.querySelector("#check").checked = false;
-        localStorage.clear();//После отправки формы и обработки ответа код сбрасывает значения полей формы и очищает localStorage
+        localStorage.clear();
         return false;
     });
   

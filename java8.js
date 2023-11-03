@@ -105,6 +105,6 @@ $(document).ready(function () {
         } else {
             $("#lete").prop("disabled", true);
         }
-        return fale;
+        return false;
     });
 });
